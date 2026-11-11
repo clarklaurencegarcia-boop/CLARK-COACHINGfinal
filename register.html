@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Clark Coaching</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-page { min-height:80vh; display:flex; align-items:center; justify-content:center; padding:40px 20px; }
+        .auth-card { width:100%; max-width:450px; padding:32px; background:var(--dark-card); border:1px solid rgba(34,197,94,.25); border-radius:16px; }
+        .auth-card h1 { color:var(--white); text-align:center; }
+        .auth-card label { color:var(--primary); }
+        .auth-card button { width:100%; }
+        .auth-card a { color:var(--primary); }
+        .auth-card .hint { color:#bcb5c3; text-align:center; }
+    </style>
+</head>
+<body>
+    <nav><a href="index.html" class="logo">Clark<span>Coaching</span></a></nav>
+    <main class="auth-page">
+        <section class="auth-card">
+            <h1>Create Account</h1>
+            <p class="hint">Register to access Clark Coaching.</p>
+            <form action="register.php" method="POST">
+                <p><label for="username">Username:</label><input id="username" name="username" type="text" minlength="3" maxlength="50" required autocomplete="username"></p>
+                <p><label for="email">Email:</label><input id="email" name="email" type="email" maxlength="100" required autocomplete="email"></p>
+                <p><label for="password">Password:</label><input id="password" name="password" type="password" minlength="8" required autocomplete="new-password"></p>
+                <p><label for="confirm_password">Confirm Password:</label><input id="confirm_password" name="confirm_password" type="password" minlength="8" required autocomplete="new-password"></p>
+                <button type="submit">Create Account</button>
+            </form>
+            <p class="hint">Already registered? <a href="login.html">Log in</a></p>
+        </section>
+    </main>
+</body>
+</html>
